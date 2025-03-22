@@ -1,5 +1,6 @@
 
 import { Linkedin, Mail } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const teamMembers = [
   {
@@ -33,21 +34,24 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const isMobile = useIsMobile();
+  const displayMembers = isMobile ? teamMembers.slice(0, 2) : teamMembers;
+
   return (
-    <section id="equipo" className="section-padding bg-secondary/30">
+    <section id="equipo" className="section-padding bg-antiFlash/50">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="section-title">Nuestro Equipo</h2>
           <p className="section-subtitle">
             Profesionales altamente calificados con amplia experiencia en el sector contable y financiero.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {displayMembers.map((member, index) => (
             <div
               key={index}
-              className="group backdrop-blur-card rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
+              className="group backdrop-blur-card rounded-xl overflow-hidden transition-all duration-300 hover-card"
             >
               <div className="aspect-square relative overflow-hidden">
                 <img
@@ -55,7 +59,7 @@ const Team = () => {
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-springGreen/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
                   <div className="flex gap-4">
                     <a
                       href={member.linkedin}
@@ -74,16 +78,31 @@ const Team = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-display text-xl font-semibold">{member.name}</h3>
-                <p className="text-muted-foreground">{member.role}</p>
+              <div className="p-4 md:p-5">
+                <h3 className="font-display text-lg md:text-xl font-semibold">{member.name}</h3>
+                <p className="text-muted-foreground text-sm">{member.role}</p>
               </div>
             </div>
           ))}
         </div>
+
+        {isMobile && (
+          <div className="mt-6 text-center">
+            <Link
+              to="/nosotros"
+              className="inline-flex items-center text-sm font-medium text-springGreen"
+            >
+              Ver equipo completo
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
 };
+
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default Team;

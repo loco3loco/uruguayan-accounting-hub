@@ -66,6 +66,67 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// New custom color palette
+				airBlue: {
+					DEFAULT: '#83A5C6',
+					100: '#15212d',
+					200: '#2a425b',
+					300: '#3f6388',
+					400: '#5785b2',
+					500: '#83a5c6',
+					600: '#9db8d2',
+					700: '#b6c9dd',
+					800: '#cedbe9',
+					900: '#e7edf4'
+				},
+				jungleGreen: {
+					DEFAULT: '#47A67C',
+					100: '#0e2118',
+					200: '#1c4231',
+					300: '#2a6349',
+					400: '#388362',
+					500: '#47a67c',
+					600: '#65bd95',
+					700: '#8bcdb0',
+					800: '#b2deca',
+					900: '#d8eee5'
+				},
+				springGreen: {
+					DEFAULT: '#13754C',
+					100: '#04180f',
+					200: '#082f1f',
+					300: '#0c472e',
+					400: '#0f5f3e',
+					500: '#13754c',
+					600: '#1eb677',
+					700: '#3fe09d',
+					800: '#7feabd',
+					900: '#bff5de'
+				},
+				celadon: {
+					DEFAULT: '#95D3AF',
+					100: '#153322',
+					200: '#2b6643',
+					300: '#409965',
+					400: '#64be89',
+					500: '#95d3af',
+					600: '#acdbc0',
+					700: '#c0e5d0',
+					800: '#d5eedf',
+					900: '#eaf6ef'
+				},
+				antiFlash: {
+					DEFAULT: '#E8EBED',
+					100: '#293035',
+					200: '#536069',
+					300: '#7f909a',
+					400: '#b4bdc4',
+					500: '#e8ebed',
+					600: '#edeff1',
+					700: '#f1f3f4',
+					800: '#f6f7f8',
+					900: '#fafbfb'
 				}
 			},
 			borderRadius: {

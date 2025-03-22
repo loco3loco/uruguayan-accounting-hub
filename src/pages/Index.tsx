@@ -8,6 +8,7 @@ import Team from '@/components/Team';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import AnimatedTransition from '@/components/AnimatedTransition';
+import MobileNav from '@/components/MobileNav';
 
 const Index = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Index = () => {
     <AnimatedTransition>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main>
+        <main className="pb-safe">
           <Hero />
           <Services />
           <About />
@@ -26,6 +27,7 @@ const Index = () => {
           <Contact />
         </main>
         <Footer />
+        <MobileNav />
       </div>
     </AnimatedTransition>
   );
