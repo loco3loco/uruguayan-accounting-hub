@@ -18,7 +18,7 @@ const MobileNav = () => {
         className={`mobile-nav-item ${isActive('/') ? 'text-primary' : 'text-muted-foreground'}`}
       >
         <Home className="mobile-nav-icon" />
-        <span className="text-xs">Inicio</span>
+        <span>Inicio</span>
       </Link>
       
       <Link 
@@ -26,7 +26,7 @@ const MobileNav = () => {
         className={`mobile-nav-item ${isActive('/servicios') ? 'text-primary' : 'text-muted-foreground'}`}
       >
         <Briefcase className="mobile-nav-icon" />
-        <span className="text-xs">Servicios</span>
+        <span>Servicios</span>
       </Link>
       
       <Link 
@@ -34,7 +34,7 @@ const MobileNav = () => {
         className={`mobile-nav-item ${isActive('/nosotros') ? 'text-primary' : 'text-muted-foreground'}`}
       >
         <Users className="mobile-nav-icon" />
-        <span className="text-xs">Nosotros</span>
+        <span>Nosotros</span>
       </Link>
       
       <Link 
@@ -42,7 +42,7 @@ const MobileNav = () => {
         className={`mobile-nav-item ${isActive('/contacto') ? 'text-primary' : 'text-muted-foreground'}`}
       >
         <Mail className="mobile-nav-icon" />
-        <span className="text-xs">Contacto</span>
+        <span>Contacto</span>
       </Link>
     </div>
   );

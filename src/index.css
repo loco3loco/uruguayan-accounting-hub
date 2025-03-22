@@ -121,7 +121,7 @@
   }
 
   .section-padding {
-    @apply py-12 md:py-20 px-3 md:px-6;
+    @apply py-14 md:py-24 px-4 md:px-8;
   }
 
   .section-title {
@@ -129,7 +129,7 @@
   }
   
   .section-subtitle {
-    @apply text-muted-foreground text-base md:text-xl max-w-2xl mx-auto mb-8 md:mb-12;
+    @apply text-muted-foreground text-base md:text-xl max-w-2xl mx-auto mb-8 md:mb-16;
   }
   
   .button-transition {
@@ -138,15 +138,15 @@
 
   /* Mobile optimizations */
   .mobile-container {
-    @apply px-3 sm:px-4 md:px-6;
+    @apply px-4 sm:px-6 md:px-8;
   }
 
   .mobile-menu {
-    @apply py-2 px-3;
+    @apply py-3 px-4;
   }
 
   .mobile-section {
-    @apply py-8 md:py-16;
+    @apply py-10 md:py-16;
   }
 
   /* Card hover effect */
@@ -201,36 +201,19 @@
 
 /* Mobile-friendly bottom navigation */
 .mobile-nav-bottom {
-  @apply fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border z-40 py-2 px-2 flex justify-around items-center;
-  box-shadow: 0 -1px 6px rgba(0,0,0,0.05);
+  @apply fixed bottom-0 left-0 right-0 bg-background/90 backdrop-blur-md border-t border-border z-40 py-2 px-4 flex justify-around items-center;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
 .mobile-nav-item {
-  @apply flex flex-col items-center justify-center p-1.5;
+  @apply flex flex-col items-center justify-center text-xs font-medium p-2;
 }
 
 .mobile-nav-icon {
-  @apply mb-0.5 h-5 w-5;
+  @apply mb-1 h-5 w-5;
 }
 
 /* Utility for bottom padding to account for mobile nav */
 .pb-safe {
   padding-bottom: calc(env(safe-area-inset-bottom) + 4rem);
-}
-
-/* Mobile optimizations */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  
-  .section-padding {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-  
-  .grid {
-    gap: 1rem;
-  }
 }
